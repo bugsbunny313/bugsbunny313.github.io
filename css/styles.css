@@ -19,14 +19,24 @@ body {
     }
 }
 
-menu,ul {
+.menu {
     list-style-type: none !important;
     display: flex;
+    justify-content: space-between;
     height: 80px;
     padding: 0 240px;
     margin: 0;
-
+    align-items: center;
     background-color: #F6DEB6;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+
+    ol {
+        display: flex;
+    }
 
 
 
@@ -36,11 +46,12 @@ menu,ul {
         font-weight: 300;
         line-height: 32px;
         color: #425046;
-        padding: 24px 24px 24px 0;
         display: flex;
+        margin-right: 24px;
 
         a {
             color: #425046;
+
         }
 
         img {
@@ -58,23 +69,22 @@ menu,ul {
         }
 
         &.social-network {
-            display: flex;
-            justify-content: flex-end;
-            width: calc(100% - 810px);
-            img {
+            margin-right: 0;
+
+            a:first-child {
                 padding-right: 24px;
             }
         }
     }
 }
 
+
 .main__content {
-    padding: 15%;
+    padding: 22% 15%;
 }
 
 .main {
     background: url("/assets/img/main.png"), linear-gradient(104.78deg, rgba(0, 0, 0, 0.3575) 21.73%, rgba(0, 0, 0, 0.1375) 48.8%, rgba(0, 0, 0, 0.066) 62.25%, rgba(0, 0, 0, 0) 78.21%);
-    height: 1080px;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,7 +134,8 @@ menu,ul {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top left;
+
 
     h2 {
         font-family: 'Cormorant', serif;
@@ -144,7 +155,7 @@ menu,ul {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: top left;
 }
 
 .fine-art__content {
@@ -163,4 +174,49 @@ menu,ul {
     left: 240px;
     font-weight: 100;
     color: #d9d9d9a1;
+}
+
+aside {
+    height: 370px;
+    padding:  120px 0 0 240px;
+    background-color: #F6DEB6;
+    box-sizing: border-box;
+    h2 {
+        font-family: Cormorant;
+        font-size: 85px;
+        font-weight: 100;
+        line-height: 103px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        color: black;
+    }
+    p {
+        font-family: Noto Sans;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: black;
+
+    }
+}
+
+.child-portrait {
+
+}
+
+.child-portrait__block {
+    display: flex;
+}
+img {
+    &.w33 {
+        width: 33.33%;
+    }
+    &.w50 {
+        width: 50%;
+    }
+    &.w100 {
+        width: 100%;
+    }
 }
