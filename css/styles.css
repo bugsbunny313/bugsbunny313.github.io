@@ -23,49 +23,53 @@ body {
     list-style-type: none !important;
     display: flex;
     justify-content: space-between;
-    height: 80px;
-    padding: 0 240px;
+    height: 6vw;
     margin: 0;
     align-items: center;
     background-color: #F6DEB6;
     position: absolute;
-    z-index: 2;
+    z-index: 25;
     left: 0;
     right: 0;
     box-sizing: border-box;
+    padding: 0 10%;
+
+    @media (max-width: 1200px) {
+        display: none;
+    }
 
     ol {
         display: flex;
+        padding-inline-start: 0;
     }
-
-
 
     li {
         font-family: Noto Sans, serif;
-        font-size: 24px;
+        font-size: 2vw;
         font-weight: 300;
-        line-height: 32px;
+        line-height: 3vw;
         color: #425046;
         display: flex;
-        margin-right: 24px;
+        margin-right: 1vw;
 
         a {
             color: #425046;
-
         }
 
         img {
-            padding-right: 4px;
+            padding-right: 1vw;
+            width: 2.4vw;
+            vertical-align: middle;
         }
 
         &.city {
-            width: 184px;
+            width: 22vw;
         }
         &.phone {
-            width: 228px;
+            width: 21vw;
         }
         &.mail {
-            width: 254px;
+            width: 25vw;
         }
 
         &.social-network {
@@ -80,77 +84,64 @@ body {
 
 
 .main__content {
-    padding: 22% 15%;
-}
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    padding: 20% 10% 0 10%;
 
-.main {
-    background: url("/assets/img/main.png"), linear-gradient(104.78deg, rgba(0, 0, 0, 0.3575) 21.73%, rgba(0, 0, 0, 0.1375) 48.8%, rgba(0, 0, 0, 0.066) 62.25%, rgba(0, 0, 0, 0) 78.21%);
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top right;
-
+    @media (max-width: 1200px) {
+        padding: 15% 10% 0 10%;
+    }
 
     h3 {
         font-family: 'Cormorant', serif;
-        font-size: 32px;
+        font-size: 2.5vw;
         font-weight: 100;
-        line-height: 40px;
+        line-height: 2.5vw;
         letter-spacing: 0em;
         color: #FFFFFFE5;
         text-transform: uppercase;
-
     }
 
     h1 {
         font-family: 'Cormorant', serif;
-        font-size: 120px;
+        font-size: 6vw;
         font-weight: 400;
-        line-height: 132px;
+        line-height: 6vw;
         color: #FFFFFF;
         text-transform: uppercase;
-        margin: 0 0 82px;
+        margin: 1vw 0 2vw;
     }
     button {
-        width: 320px;
-        height: 84px;
-        padding: 28px 0;
+        width: 30vw;
+        height: 8vw;
+        padding: 1vw 0;
         background-color: #425046;
 
 
         font-family: 'Noto Sans', sans-serif;
-        font-size: 24px;
+        font-size: 3vw;
         font-weight: 700;
-        line-height: 28px;
-        letter-spacing: 2px;
+        line-height: 3vw;
+        letter-spacing: 1px;
         text-align: center;
         color: #FFFFFF;
         text-transform: uppercase;
     }
 }
+
+.main {
+    margin-bottom: -5px;
+}
 .fine-art {
-    background: url("/assets/img/fine-art.png");
-    height: 1900px;
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top left;
-
-
-    h2 {
-        font-family: 'Cormorant', serif;
-        font-size: 85px;
-        font-weight: 100;
-        line-height: 103px;
-        letter-spacing: 0.05em;
-        text-align: left;
-        color: #FFFFFF;
-        text-transform: uppercase;
+    img {
+        margin-bottom: -5px;
     }
 }
 
 .fine-art-last {
-    background: url("/assets/img/fine-art-2.png");
+    background: url("/assets/img/fine-art-2.webp");
     height: 1900px;
     position: relative;
     background-size: cover;
@@ -159,43 +150,61 @@ body {
 }
 
 .fine-art__content {
-    padding: 15%;
-    max-width: 400px;
-    position: relative;
+    padding: 10%;
+    position: absolute;
+    top: 0;
+    font-size: 11vw;
+
     p {
-        font-weight: 100;
         color: #d9d9d9a1;
+        font-weight: 300;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        font-size: 1.4vw;
+
+    }
+    h2 {
+        font-family: 'Cormorant', serif;
+        text-align: left;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.05em;
     }
 
 }
 .fine-art__content-whois {
     position: absolute;
-    bottom: 80px;
-    left: 240px;
     font-weight: 100;
     color: #d9d9d9a1;
+    bottom: 0;
+    padding: 10%;
 }
 
 aside {
-    height: 370px;
-    padding:  120px 0 0 240px;
+    padding: 10% 10% 2%;
     background-color: #F6DEB6;
     box-sizing: border-box;
+
+    &.white {
+        background-color: white;
+    }
+
     h2 {
         font-family: Cormorant;
-        font-size: 85px;
+        font-size: 8vw;
         font-weight: 100;
-        line-height: 103px;
+        line-height: 8vw;
         letter-spacing: 0.05em;
         text-align: left;
         color: black;
     }
     p {
         font-family: Noto Sans;
-        font-size: 24px;
+        font-size: 1.8vw;
         font-weight: 300;
-        line-height: 32px;
-        letter-spacing: 0.02em;
+        line-height: 1.8vw;
         text-align: left;
         color: black;
 
@@ -203,7 +212,8 @@ aside {
 }
 
 .child-portrait {
-
+    cursor: grab;
+    overflow-x: hidden;
 }
 
 .child-portrait__block {
@@ -218,5 +228,175 @@ img {
     }
     &.w100 {
         width: 100%;
+    }
+}
+
+.review {
+    @media(min-width: 1200px) {
+        display: flex;
+        margin: 0 10vw 10vw;
+    }
+
+}
+
+.review__card {
+    margin: 10%;
+    border: 1px solid rgba(165, 216, 180, 1);
+    padding: 6vw;
+    @media(min-width: 1200px) {
+        margin: 0 2vw 0 0;
+        padding: 1vw;
+        width: 33.3vw;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+}
+
+
+.review__card-user {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 22vw;
+        @media(min-width: 1200px) {
+            width: 5vw;
+        }
+    }
+
+    p {
+        padding-left: 3vw;
+        font-size: 5vw;
+        font-weight: 100;
+
+        @media(min-width: 1200px) {
+            padding-left: 1vw;
+            font-size: 1.7vw;
+        }
+    }
+}
+
+.review__card-text {
+    font-size: 4.2vw;
+    @media(min-width: 1200px) {
+        font-size: 1vw;
+    }
+}
+
+.message {
+    position: relative;
+}
+
+.message__content {
+    position: absolute;
+    top: 0;
+    margin: 10%;
+
+    h2 {
+        font-family: 'Cormorant', serif;
+        font-size: 2.4vw;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: 'Noto Sans', sans-serif;
+
+        font-size: 1.4vw;
+        font-weight: lighter;
+        text-align: left;
+        color: white;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        height: 50vw;
+        width: 38vw;
+        background-color: rgba(246, 222, 182, 1);
+        padding: 3vw;
+
+        input {
+            width: 80%;
+            padding: 1vw;
+            margin-bottom: 3vw;
+            &::placeholder {
+                font-size: 1.6vw;
+                color: rgba(121, 122, 126, 1);
+            }
+        }
+
+        textarea {
+            height: 16vw;
+            padding: 1vw;
+            resize: none;
+            &::placeholder {
+                font-size: 1.6vw;
+                color: rgba(121, 122, 126, 1);
+            }
+        }
+
+        label {
+            color: rgba(121, 122, 126, 1);
+            font-size: 1.4vw;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            margin-bottom: 3vw;
+
+        }
+        button {
+            width: 26vw;
+            height: 7vw;
+            padding: 1vw 2vw;
+            background-color: #425046;
+
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1.6vw;
+            font-weight: 100;
+            letter-spacing: 1px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+
+}
+footer {
+    padding: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+
+    address {
+        font-family: Noto Sans, serif;
+        font-style: normal;
+        font-size: 2vw;
+        font-weight: 100;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Cormorant', serif;
+        font-size: 3vw;
+        font-weight: 100;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 3vw;
+    }
+
+    img {
+        width: 4vw;
+    }
+
+    a {
+        font-size: 1.6vw;
+        color: white;
     }
 }

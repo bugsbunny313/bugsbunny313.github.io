@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant&family=Noto+Sans&display=swap" rel="stylesheet">
-        <script src="js/script.js"></script>
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
@@ -29,7 +29,10 @@
             </ol>
         </nav>
         <section class="main">
+            <img class="w100" src="assets/img/main.webp" alt="main"/>
+
             <div class="main__content">
+
                 <h3>Фотокниги - Детская фотография - Репортажи</h3>
                 <h1>Наталья Непеина</h1>
                 <button onclick="scrollBottom()">Связаться</button>
@@ -37,14 +40,16 @@
         </section>
 
         <section class="fine-art">
+            <img class="w100" src="assets/img/fine-art.webp" alt="main"/>
+
             <div class="fine-art__content">
                 <h2>Fine Art</h2>
-                <p class="fine-art__content-caption">Фотография как произведение искусства. Это художественная фотография, причем не обязательно светлая в пастельных оттенках с мягким фокусом, это может быть и темная резкая фотография.</p>
+                <p class="fine-art__content-caption">Фотография как произведение искусства</p>
             </div>
-            <p class="fine-art__content-whois">Екатеринбург 2022 Полина</p>
         </section>
-        <section class="fine-art fine-art-last">
-            <p class="fine-art__content-whois">Екатеринбург 2022 Анна</p>
+
+        <section class="fine-art">
+            <img class="w100" src="assets/img/fine-art-2.webp" alt="main"/>
         </section>
 
         <aside>
@@ -53,17 +58,7 @@
         </aside>
 
         <section class="child-portrait">
-            <div class="child-portrait__block">
-                <img class="w33" src="assets/img/child_portrait_1.jpg" alt="child_portrait_1"/>
-                <img class="w33" src="assets/img/child_portrait_2.jpg" alt="child_portrait_2"/>
-                <img class="w33" src="assets/img/child_portrait_3.jpg" alt="child_portrait_3"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w50" src="assets/img/child_portrait_4.png" alt="child_portrait_4"/>
-                <img class="w50" src="assets/img/child_portrait_5.png" alt="child_portrait_5"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w100" src="assets/img/child_portrait_6.png" alt="child_portrait_6"/>
+            <div class="child-portrait__block" data-img-count="17" data-pattern="assets/img/child-portrait/child_portrait {v}.webp">
             </div>
         </section>
 
@@ -74,21 +69,7 @@
         </aside>
 
         <section class="child-portrait">
-            <div class="child-portrait__block">
-                <img class="w33" src="assets/img/school_portrait_1.png" alt="school_portrait_1"/>
-                <img class="w33" src="assets/img/school_portrait_2.png" alt="school_portrait_2"/>
-                <img class="w33" src="assets/img/school_portrait_3.png" alt="school_portrait_3"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w100" src="assets/img/school_portrait_4.png" alt="school_portrait_4"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w33" src="assets/img/school_portrait_5.png" alt="school_portrait_5"/>
-                <img class="w33" src="assets/img/school_portrait_6.png" alt="school_portrait_6"/>
-                <img class="w33" src="assets/img/school_portrait_7.png" alt="school_portrait_7"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w100" src="assets/img/school_portrait_8.png" alt="school_portrait_8"/>
+            <div class="child-portrait__block" data-img-count="9" data-pattern="assets/img/school/school {v}.webp">
             </div>
         </section>
 
@@ -99,15 +80,7 @@
         </aside>
 
         <section class="child-portrait">
-            <div class="child-portrait__block">
-                <img class="w33" src="assets/img/high_school_portrait_1.png" alt="high_school_portrait_1"/>
-                <img class="w33" src="assets/img/high_school_portrait_2.png" alt="high_school_portrait_2"/>
-                <img class="w33" src="assets/img/high_school_portrait_3.png" alt="high_school_portrait_3"/>
-            </div>
-            <div class="child-portrait__block">
-                <img class="w33" src="assets/img/high_school_portrait_4.png" alt="high_school_portrait_4"/>
-                <img class="w33" src="assets/img/high_school_portrait_5.png" alt="high_school_portrait_5"/>
-                <img class="w33" src="assets/img/high_school_portrait_6.png" alt="high_school_portrait_6"/>
+            <div class="child-portrait__block" data-img-count="9" data-pattern="assets/img/high_school/high_school {v}.webp">
             </div>
         </section>
 
@@ -116,7 +89,96 @@
             <p>Самые яркие эмоции - спонтанные живые съемки</p>
         </aside>
 
+        <section class="child-portrait">
+            <div class="child-portrait__block" data-img-count="70" data-pattern="assets/img/report/report {v}.webp">
+            </div>
+        </section>
+
+        <aside>
+            <h2>Групповые фото</h2>
+            <p>Сохранить память о дружном коллективе — бесценно</p>
+        </aside>
+
+        <section class="child-portrait">
+            <div class="child-portrait__block" data-img-count="3" data-pattern="assets/img/group/group {v}.webp">
+            </div>
+        </section>
+
+        <aside class="white">
+            <h2>Отзывы</h2>
+        </aside>
+
+        <section class="review">
+            <div class="review__card">
+                <div class="review__card-user">
+                    <img src="assets/img/users/img.png">
+                    <p>Лина Семенова</p>
+                </div>
+                <p class="review__card-text">
+                    Наташа, спасибо вам огромное,
+                    альбомы невероятно красивые!❤️❤️️❤️️
+                </p>
+            </div>
+            <div class="review__card">
+                <div class="review__card-user">
+                    <img src="assets/img/users/img_1.png">
+                    <p>Надежда</p>
+                </div>
+                <p class="review__card-text">
+                    Наталья Николаевна, спасибо Вам
+                    огромное, смотрю и любуюсь, очень
+                    классно получилось. Простите, что
+                    я со своими правками пристаю :)
+                    мне очень нравятся фотки.
+                </p>
+            </div>
+            <div class="review__card">
+                <div class="review__card-user">
+                    <img src="assets/img/users/img_2.png">
+                    <p>Татьяна</p>
+                </div>
+                <p class="review__card-text">
+                    Наталья, посмотрела альбомы,
+                    очень красиво получилось! Спасибо
+                    большое!!!
+                </p>
+            </div>
+        </section>
+
+        <section class="message">
+            <section class="fine-art">
+                <img class="w100" src="assets/img/message.webp" alt="main"/>
+            </section>
+            <section class="message__content">
+                <h2>Свяжитесь со мной</h2>
+                <p>Я буду очень рада поработать над вашими фотографиями</p>
+                <form id="message-form" onsubmit="return false">
+                    <input type="text" name="name" placeholder="Имя" maxlength="50">
+                    <input type="phone" name="phone" placeholder="Ваш телефон" maxlength="50">
+                    <input type="text" name="theme" placeholder="Тема сообщения" maxlength="50">
+                    <textarea placeholder="Сообщение" name="text" maxlength="300"></textarea>
+                    <label>0/300 символов</label>
+                    <button type="button">Оправить сообщение</button>
+                </form>
+            </section>
+        </section>
+
+        <footer>
+            <div>
+                <h3>Контакты</h3>
+                <address>
+                    г. Екатеринбург, Непеина Наталья
+                </address>
+                <div><a href="tel:+79221047684">+7 922 104 76 84</a></div>
+                <div><a href="mailto:nepeinann@yandex.ru">nepeinann@yandex.ru</a></div>
+            </div>
+            <div>
+                <h3>Соцсети</h3>
+                <a href=""><img alt="telegram-white" src="assets/img/telegram-white.svg" class="telegram"></a>
+                <a href=""><img alt="whatsapp" src="assets/img/whatsapp-white.svg" class="whatsapp"></a>
+            </div>
+
+        </footer>
 
     </body>
-
 </html>
